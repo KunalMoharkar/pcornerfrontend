@@ -51,7 +51,7 @@ class Contents extends React.Component {
                 <p class="card-text"><b>Technologies used: </b>{item.tech_used}</p>
                 <div class="card-text"><b>Criterion: </b>{item.criterion}</div>
                 <br/>
-                <Link to={"/Applicationform/"} class="btn btn-primary">Apply</Link>
+                <Link to={`/Applicationform/${item.id}`} class="btn btn-primary">Apply</Link>
               </div>
             </div>
        ))}

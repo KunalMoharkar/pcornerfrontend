@@ -53,12 +53,12 @@ class ContentsProfessor extends React.Component {
                 <div class="card-text"><b>Criterion: </b>{item.criterion}</div>
                 <br/>
                 <Link to={`/ContentsApplicants/${item.id}`} class="btn btn-primary">See Applicants</Link>
-                <Link to={"/Addprojectform/"} class="btn btn-primary" >Add</Link>
 
               </div>
 
             </div>
        ))}
+       <Link to={"/Addprojectform/"} class="btn btn-dark" >Add New Project</Link>
 
      </div>
      </div>

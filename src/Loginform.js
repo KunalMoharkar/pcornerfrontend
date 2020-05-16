@@ -10,7 +10,7 @@ class Loginform extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id :'5',
+      user_id :'',
       username: '',
       password: '',
       isLoaded:"a",
@@ -53,6 +53,7 @@ class Loginform extends React.Component {
         localStorage.setItem('token',this.state.token)
         localStorage.setItem('username',this.state.username)
 
+
         let url2 ="http://127.0.0.1:8000/accounts/api/users/?username="+this.state.username
         fetch(url2, {headers: {
                Authorization: `JWT ${localStorage.getItem('token')}`
@@ -67,10 +68,11 @@ class Loginform extends React.Component {
                 isLoaded: "b",
                 items: result[0],
                 islogged:true,
-                is_student: result[0].is_student
+                is_student: result[0].is_student,
+                user_id:result[0].id
               })
 
-
+              localStorage.setItem('user_id',this.state.user_id)
 
 
             }

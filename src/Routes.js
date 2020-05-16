@@ -22,7 +22,7 @@ class Routes extends Component {
                         <Route exact path={"/Footer/"} component={Footer}/>
                         <Route exact path={"/ContentsProfessor/:professor_id"} component={ContentsProfessor}/>
                         <Route exact path={"/ContentsApplicants/:project_id"} name="ContentsApplicants" component={ContentsApplicants}/>
-                        <Route exact path={"/Applicationform/"} component={Applicationform}/>
+                        <Route exact path={"/Applicationform/:project_id"} component={Applicationform}/>
                         <Route exact path={"/Addprojectform/"}  component={Addprojectform}/>
                         <Route exact path={"/Logout/"} component={Logout}/>
 
